@@ -1,6 +1,7 @@
 import Script from "next/script";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import { Providers } from "@/lib/providers";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -87,6 +88,7 @@ export default function RootLayout({
 					<main className="flex min-h-screen w-full flex-col">{children}</main>
 					<Footer />
 				</Providers>
+				<Analytics />
 			</body>
 		</html>
 	);
