@@ -52,7 +52,9 @@ const Header = () => {
 					<ul className="flex list-none items-center gap-6">
 						{NAV_LINKS.map((link, index) => (
 							<li key={index}>
-								<a href={link.href}>{link.label}</a>
+								<a href={link.href} aria-label={`Direct to ${link.label} page`}>
+									{link.label}
+								</a>
 							</li>
 						))}
 					</ul>
@@ -65,7 +67,7 @@ const Header = () => {
 
 				<Drawer open={isOpen} onOpenChange={setIsOpen}>
 					<DrawerTrigger asChild className="flex md:hidden">
-						<IconButton>
+						<IconButton aria-label="Open menu">
 							<Menu />
 						</IconButton>
 					</DrawerTrigger>
@@ -73,7 +75,7 @@ const Header = () => {
 						<div className="flex items-center justify-between border-b border-gray-100 p-4">
 							<Logo />
 							<DrawerClose asChild>
-								<IconButton>
+								<IconButton aria-label="Close menu">
 									<X />
 								</IconButton>
 							</DrawerClose>

@@ -39,14 +39,14 @@ const ProjectDetails = ({
 						: "md:order-last md:rounded-r-xl md:border-l"
 				)}
 			>
-				<Link noCustomization href={url} externalLink>
+				<a href={url} aria-label="Direct to single project">
 					<Image
 						src={finalSrc!}
 						alt={`${name} preview`}
 						className="rounded-xl shadow-lg transition-transform duration-500 md:hover:scale-105"
 						style={{ objectFit: "cover" }}
 					/>
-				</Link>
+				</a>
 			</div>
 
 			{/* Content */}

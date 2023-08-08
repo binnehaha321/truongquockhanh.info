@@ -8,6 +8,7 @@ const SocialIcons = () => {
 		<div className="flex gap-1">
 			{SOCIAL_LINKS.map((socialLink, index) => (
 				<IconButton
+					aria-label={`Link to ${socialLink.name}`}
 					key={index}
 					onClick={() => window.open(socialLink.url, "_blank")}
 				>

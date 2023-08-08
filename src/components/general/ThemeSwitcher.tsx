@@ -21,14 +21,14 @@ const ThemeSwitcher = () => {
 	// until the UI is mounted, display a dummy icon
 	if (!mounted) {
 		return (
-			<IconButton>
+			<IconButton aria-label="Show this first dummy icon when the UI is unmounted">
 				<Sun />
 			</IconButton>
 		);
 	}
 
 	return (
-		<IconButton onClick={toggleTheme}>
+		<IconButton aria-label="Switch theme" onClick={toggleTheme}>
 			{theme === "dark" ? <Sun /> : <MoonStar />}
 		</IconButton>
 	);

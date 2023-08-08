@@ -1,4 +1,3 @@
-import Script from "next/script";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
@@ -12,7 +11,7 @@ const inter = Inter({ subsets: ["latin"] });
 const title = "Khanh Truong | Front End Engineer From HCMC, Vietnam";
 const description =
 	"A self-proclaimed composer who specializes in front end development (React.js & Next.js), from HCMC, Vietnam.";
-export const url = "https://truongquockhanh.info";
+export const url = "https://www.truongquockhanh.info";
 
 export const metadata: Metadata = {
 	metadataBase: new URL(url),
@@ -56,8 +55,6 @@ export const metadata: Metadata = {
 	},
 };
 
-const googleAnalyticsId = process.env.GOOGLE_ANALYTICS_ID;
-
 export default function RootLayout({
 	children,
 }: {
@@ -65,23 +62,9 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en" className="!scroll-smooth" suppressHydrationWarning>
-			{googleAnalyticsId ? (
-				<head>
-					<Script
-						async
-						src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`}
-					></Script>
-					<Script id="google-anayltics-script">
-						{`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-          
-            gtag('config', '${googleAnalyticsId}');
-          `}
-					</Script>
-				</head>
-			) : null}
+			<head>
+				<link rel="canonical" href={url} />
+			</head>
 			<body className={`${inter.className} bg-gray text-gray-600 antialiased`}>
 				<Providers>
 					<Header />

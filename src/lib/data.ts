@@ -74,14 +74,17 @@ export const SOCIAL_LINKS = [
 	{
 		icon: Github,
 		url: "https://github.com/binnehaha321",
+		name: "GitHub",
 	},
 	{
 		icon: Linkedin,
 		url: "https://www.linkedin.com/in/tqk/",
+		name: "Linkedin",
 	},
 	{
 		icon: Facebook,
 		url: "https://www.facebook.com/binneahihi",
+		name: "Facebook",
 	},
 ];
 
@@ -280,7 +283,7 @@ export const PROJECTS: ProjectDetails[] = [
 		name: "My portfolio (v1)",
 		description:
 			"The first portfolio written with HTML5, SCSS, JavaScript, and Bootstrap 5 There are several valuable sections that I omitted in this second version.",
-		url: "",
+		url: "https://khanhtq-resume.vercel.app/",
 		previewImage: WorkPortfolioV1,
 		technologies: ["HTML5", "SCSS", "JavaScript", "Bootstrap 5"],
 	},
