@@ -52,7 +52,11 @@ const Header = () => {
 					<ul className="flex list-none items-center gap-6">
 						{NAV_LINKS.map((link, index) => (
 							<li key={index}>
-								<a href={link.href} aria-label={`Direct to ${link.label} page`}>
+								<a
+									rel="canonical"
+									href={link.href}
+									aria-label={`Direct to ${link.label} page`}
+								>
 									{link.label}
 								</a>
 							</li>

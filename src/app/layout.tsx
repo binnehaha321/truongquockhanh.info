@@ -62,9 +62,6 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en" className="!scroll-smooth" suppressHydrationWarning>
-			<head>
-				<link rel="canonical" href={url} />
-			</head>
 			<body className={`${inter.className} bg-gray text-gray-600 antialiased`}>
 				<Providers>
 					<Header />
