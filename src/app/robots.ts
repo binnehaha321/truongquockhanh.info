@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next";
-import { url } from "./layout";
+
+const url = `https://${process.env.VERCEL_URL}`;
 
 export default function robots(): MetadataRoute.Robots {
 	return {

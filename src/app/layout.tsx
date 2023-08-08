@@ -8,13 +8,13 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
+const baseUrl = `https://${process.env.VERCEL_URL}`;
+
 const title = "Khanh Truong | Front End Engineer From HCMC, Vietnam";
 const description =
 	"A self-proclaimed composer who specializes in front end development (React.js & Next.js), from HCMC, Vietnam.";
-export const url = "https://www.truongquockhanh.info";
 
 export const metadata: Metadata = {
-	metadataBase: new URL(url),
 	title,
 	description,
 	keywords: [
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
 	],
 	openGraph: {
 		type: "website",
-		url,
+		url: baseUrl,
 		title,
 		description,
 		siteName: title,
@@ -61,7 +61,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang="en" className="!scroll-smooth" suppressHydrationWarning>
+		<html lang="en" suppressHydrationWarning>
 			<body className={`${inter.className} bg-gray text-gray-600 antialiased`}>
 				<Providers>
 					<Header />
