@@ -42,6 +42,8 @@ const ContactSection = () => {
 		}
 	};
 
+	const handleReplacePhone = (phone: string) => phone.replace(" ", "");
+
 	return (
 		<Container id="contact">
 			<div className="flex flex-col items-center gap-4">
@@ -79,7 +81,10 @@ const ContactSection = () => {
 						<IconButton
 							aria-label="Copy phone number"
 							size={width && width < 768 ? "md" : "lg"}
-							onClick={() => handleCopyClick(phone.replace(" ", ""), "phone")}
+							onClick={() => {
+								const phoneVal = handleReplacePhone(phone);
+								handleCopyClick(phoneVal, "phone");
+							}}
 							showTooltip={isCopied && copiedValueType === "phone"}
 							tooltipText="Copied!"
 						>

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { MapPin } from "lucide-react";
 
-import Portrait from "/public/images/portrait.svg";
+import Portrait from "/public/images/portrait.png";
 import SocialIcons from "@/components/data-display/SocialIcon";
 import Typography from "@/components/general/Typography";
 import Container from "@/components/layout/Container";
