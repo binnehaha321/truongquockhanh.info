@@ -67,6 +67,7 @@ const ProjectDetails = ({
 				</div>
 				<Link
 					href={url}
+					aria-label={`Open a new tab of ${name}`}
 					noCustomization
 					className="self-start rounded-lg p-1.5 hover:bg-gray-50 [&_svg]:stroke-gray-500"
 					externalLink

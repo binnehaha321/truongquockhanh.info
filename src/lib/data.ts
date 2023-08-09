@@ -24,18 +24,17 @@ import LogoCypressLight from "/public/images/logos/logo-cypress-light.svg";
 import LogoRadixuiLight from "/public/images/logos/logo-radixui-light.svg";
 import LogoRadixuiDark from "/public/images/logos/logo-radixui-dark.svg";
 
-import LogoGiraTech from "/public/images/logos/logo-gira.png";
-import LogoSplus from "/public/images/logos/logo-splus.png";
-import LogoLikelion from "/public/images/logos/logo-likelion.png";
-import LogoBtec from "public/images/logos/logo-btec.png";
+import LogoGiraTech from "/public/images/logos/logo-gira.svg";
+import LogoSplus from "/public/images/logos/logo-splus.svg";
+import LogoLikelion from "/public/images/logos/logo-likelion.svg";
+import LogoBtec from "public/images/logos/logo-btec.svg";
 
-import LogoGreenwichLight from "/public/images/logos/logo-greenwich-light.png";
-import LogoGreenwichDark from "/public/images/logos/logo-greenwich-dark.png";
-import LogoKDU from "/public/images/logos/logo-kdu.png";
-import WorkHelli from "/public/images/work/work-helli.png";
-import WorkGWCMS from "/public/images/work/work-gw-cms.png";
-import WorkExpense from "/public/images/work/work-expense.png";
-import WorkPortfolioV1 from "/public/images/work/work-portfolio-v1.png";
+import LogoGreenwich from "/public/images/logos/logo-greenwich.svg";
+import LogoKDU from "/public/images/logos/logo-kdu.svg";
+import WorkHelli from "/public/images/work/work-helli.svg";
+import WorkGWCMS from "/public/images/work/work-gw-cms.svg";
+import WorkExpense from "/public/images/work/work-expense.svg";
+import WorkPortfolioV1 from "/public/images/work/work-portfolio-v1.svg";
 
 import {
 	EducationDetail,
@@ -292,8 +291,7 @@ export const PROJECTS: ProjectDetails[] = [
 export const EDUCATIONS: EducationDetail[] = [
 	{
 		name: "University of Greenwich Vietnam",
-		logo: LogoGreenwichLight,
-		logoDark: LogoGreenwichDark,
+		logo: LogoGreenwich,
 		program: "Computer Science",
 		startDate: new Date(2019, 8),
 		endDate: new Date(2023, 5),

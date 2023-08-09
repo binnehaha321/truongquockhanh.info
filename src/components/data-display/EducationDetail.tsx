@@ -34,7 +34,7 @@ const EducationDetail = ({
 				<Image
 					src={finalSrc}
 					alt={`Logo ${name}`}
-					className="max-h-[150px] w-full py-5 object-contain mx-auto rounded-xl shadow-lg bg-gray-50 transition-transform duration-500 md:hover:scale-105"
+					className="max-h-[150px] w-full py-5 object-contain mx-auto rounded-xl shadow-lg bg-slate-50 transition-transform duration-500 md:hover:scale-105"
 				/>
 			</Link>
 			<div>

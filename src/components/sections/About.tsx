@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import KhanhFullPose from "/public/images/khanh-full-pose.jpg";
+import KhanhFullPose from "/public/images/khanh-full-pose.svg";
 import Tag from "@/components/data-display/Tag";
 import Container from "@/components/layout/Container";
 import Typography from "@/components/general/Typography";
@@ -30,7 +30,7 @@ const AboutMeSection = () => {
 
 				{/* Content */}
 				<div className="flex max-w-xl flex-col gap-6">
-					<Typography variant="h3">
+					<Typography className="font-bold text-[24px]">
 						Curious about me? Here you have it:
 					</Typography>
 					<Typography>

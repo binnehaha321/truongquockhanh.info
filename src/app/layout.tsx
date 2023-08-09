@@ -15,6 +15,7 @@ const description =
 	"A self-proclaimed composer who specializes in front end development (React.js & Next.js), from HCMC, Vietnam.";
 
 export const metadata: Metadata = {
+	metadataBase: new URL(baseUrl),
 	title,
 	description,
 	keywords: [

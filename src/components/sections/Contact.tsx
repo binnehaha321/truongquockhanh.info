@@ -59,7 +59,7 @@ const ContactSection = () => {
 					<div className="flex items-center gap-4 md:gap-5">
 						<Mail className="h-6 w-6 md:h-8 md:w-8" />
 						<Link href={`mailto:${email}`}>
-							<Typography variant="h3">{email}</Typography>
+							<Typography className="text-[24px] font-bold">{email}</Typography>
 						</Link>
 						<IconButton
 							aria-label="Copy email"
@@ -74,7 +74,7 @@ const ContactSection = () => {
 					<div className="flex items-center gap-4 md:gap-5">
 						<Phone className="h-6 w-6 md:h-8 md:w-8" />
 						<Link href={`tel:${phone.replace(" ", "")}`}>
-							<Typography variant="h3">{phone}</Typography>
+							<Typography className="text-[24px] font-bold">{phone}</Typography>
 						</Link>
 						<IconButton
 							aria-label="Copy phone number"

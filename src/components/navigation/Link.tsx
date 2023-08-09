@@ -9,6 +9,7 @@ interface LinkProps extends NextLinkProps {
 	noCustomization?: boolean;
 	externalLink?: boolean;
 	withUnderline?: boolean;
+	"aria-label"?: string;
 }
 
 const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(
