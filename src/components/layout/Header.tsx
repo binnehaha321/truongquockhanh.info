@@ -1,59 +1,65 @@
-"use client";
+'use client'
 
-import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { useEffect, useState } from 'react'
+import { Menu, X } from 'lucide-react'
 
 import {
 	Drawer,
 	DrawerTrigger,
 	DrawerContent,
-	DrawerClose,
-} from "@/components/navigation/Drawer";
-import { NAV_LINKS } from "@/lib/data";
-import { mergeClasses } from "@/lib/utils";
-import useWindowSize from "@/hooks/useWindowSize";
-import useScroll from "@/hooks/useScroll";
-import Link from "@/components/navigation/Link";
-import ThemeSwitcher from "@/components/general/ThemeSwitcher";
-import IconButton from "@/components/general/IconButton";
-import DownloadFile from "@/components/general/DownloadFile";
-import Typography from "@/components/general/Typography";
+	DrawerClose
+} from '@/components/navigation/Drawer'
+import { NAV_LINKS } from '@/lib/data'
+import { mergeClasses } from '@/lib/utils'
+import useWindowSize from '@/hooks/useWindowSize'
+import useScroll from '@/hooks/useScroll'
+import Link from '@/components/navigation/Link'
+import ThemeSwitcher from '@/components/general/ThemeSwitcher'
+import IconButton from '@/components/general/IconButton'
+import DownloadFile from '@/components/general/DownloadFile'
+import Typography from '@/components/general/Typography'
 
 const Logo = () => (
-	<Typography variant="h3" className="font-bold">
-		{"<KT />"}
+	<Typography
+		variant='h3'
+		className='font-bold'
+	>
+		{'<KT />'}
 	</Typography>
-);
+)
 
 const Header = () => {
-	const scrolled = useScroll(40);
-	const [isOpen, setIsOpen] = useState(false);
-	const size = useWindowSize();
+	const scrolled = useScroll(40)
+	const [isOpen, setIsOpen] = useState(false)
+	const size = useWindowSize()
 
 	// close sidebar if open in screen size < 768px
 	useEffect(() => {
 		if (size?.width && size?.width > 767 && isOpen) {
-			setIsOpen(false);
+			setIsOpen(false)
 		}
-	}, [size, isOpen]);
+	}, [size, isOpen])
 
 	return (
 		<header
 			className={mergeClasses(
-				"sticky top-0 z-30 w-full border-b border-transparent bg-gray max-md:border-gray-100",
-				scrolled ? "bg-gray/50 backdrop-blur-xl md:border-gray-100" : ""
+				'sticky top-0 z-30 w-full border-b border-transparent bg-gray max-md:border-gray-100',
+				scrolled ? 'bg-gray/50 backdrop-blur-xl md:border-gray-100' : ''
 			)}
 		>
-			<div className="mx-auto flex w-full max-w-7xl items-center justify-between p-4 md:px-8">
-				<Link href="/" noCustomization>
+			<div className='mx-auto flex w-full max-w-7xl items-center justify-between p-4 md:px-8'>
+				<Link
+					href='/'
+					noCustomization
+				>
 					<Logo />
 				</Link>
-				<div className="hidden items-center gap-6 md:flex">
-					<ul className="flex list-none items-center gap-6">
+				<div className='hidden items-center gap-6 md:flex'>
+					<ul className='flex list-none items-center gap-6'>
 						{NAV_LINKS.map((link, index) => (
 							<li key={index}>
 								<a
-									rel="canonical"
+									rel='canonical'
 									href={link.href}
 									aria-label={`Direct to ${link.label} page`}
 								>
@@ -62,39 +68,45 @@ const Header = () => {
 							</li>
 						))}
 					</ul>
-					<div className="h-6 w-0.5 bg-gray-100"></div>
-					<div className="flex items-center gap-4">
+					<div className='h-6 w-0.5 bg-gray-100'></div>
+					<div className='flex items-center gap-4'>
 						<ThemeSwitcher />
 						<DownloadFile />
 					</div>
 				</div>
 
-				<Drawer open={isOpen} onOpenChange={setIsOpen}>
-					<DrawerTrigger asChild className="flex md:hidden">
-						<IconButton aria-label="Open menu">
+				<Drawer
+					open={isOpen}
+					onOpenChange={setIsOpen}
+				>
+					<DrawerTrigger
+						asChild
+						className='flex md:hidden'
+					>
+						<IconButton aria-label='Open menu'>
 							<Menu />
 						</IconButton>
 					</DrawerTrigger>
 					<DrawerContent>
-						<div className="flex items-center justify-between border-b border-gray-100 p-4">
+						<div className='flex items-center justify-between border-b border-gray-100 p-4'>
 							<Logo />
 							<DrawerClose asChild>
-								<IconButton aria-label="Close menu">
+								<IconButton aria-label='Close menu'>
 									<X />
 								</IconButton>
 							</DrawerClose>
 						</div>
-						<div className="border-b border-gray-100 p-4">
-							<ul className="flex list-none flex-col gap-4">
+						<div className='border-b border-gray-100 p-4'>
+							<ul className='flex list-none flex-col gap-4'>
 								{NAV_LINKS.map((link, index) => (
 									<li key={index}>
 										<Link
 											href={link.href}
 											onClick={() => {
 												const timeoutId = setTimeout(() => {
-													setIsOpen(false);
-													clearTimeout(timeoutId);
-												}, 500);
+													setIsOpen(false)
+													clearTimeout(timeoutId)
+												}, 500)
 											}}
 										>
 											{link.label}
@@ -103,8 +115,8 @@ const Header = () => {
 								))}
 							</ul>
 						</div>
-						<div className="flex flex-col gap-4 p-4">
-							<div className="flex items-center justify-between">
+						<div className='flex flex-col gap-4 p-4'>
+							<div className='flex items-center justify-between'>
 								<Typography>Switch Theme</Typography>
 								<ThemeSwitcher />
 							</div>
@@ -114,7 +126,7 @@ const Header = () => {
 				</Drawer>
 			</div>
 		</header>
-	);
-};
+	)
+}
 
-export default Header;
+export default Header

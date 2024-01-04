@@ -1,15 +1,15 @@
-import * as React from "react";
-import NextLink, { LinkProps as NextLinkProps } from "next/link";
+import * as React from 'react'
+import NextLink, { LinkProps as NextLinkProps } from 'next/link'
 
-import { mergeClasses } from "@/lib/utils";
+import { mergeClasses } from '@/lib/utils'
 
 interface LinkProps extends NextLinkProps {
-	className?: string;
-	children?: React.ReactNode;
-	noCustomization?: boolean;
-	externalLink?: boolean;
-	withUnderline?: boolean;
-	"aria-label"?: string;
+	className?: string
+	children?: React.ReactNode
+	noCustomization?: boolean
+	externalLink?: boolean
+	withUnderline?: boolean
+	'aria-label'?: string
 }
 
 const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(
@@ -17,7 +17,7 @@ const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(
 		{
 			noCustomization,
 			children = null,
-			className = "",
+			className = '',
 			externalLink = false,
 			withUnderline = false,
 			...props
@@ -27,23 +27,23 @@ const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(
 		return (
 			<NextLink
 				{...props}
-				target={externalLink ? "_blank" : "_self"}
+				target={externalLink ? '_blank' : '_self'}
 				ref={ref}
 				className={mergeClasses(
 					noCustomization ??
-						"text-base font-medium text-gray-600 transition-all hover:text-gray-900 active:text-gray-600",
+						'text-base font-medium text-gray-600 transition-all hover:text-gray-900 active:text-gray-600',
 					withUnderline
-						? "underline underline-offset-4 transition-all hover:text-gray-900 active:text-gray-600"
-						: "",
+						? 'underline underline-offset-4 transition-all hover:text-gray-900 active:text-gray-600'
+						: '',
 					className
 				)}
 			>
 				{children}
 			</NextLink>
-		);
+		)
 	}
-);
+)
 
-Link.displayName = "Link";
+Link.displayName = 'Link'
 
-export default Link;
+export default Link

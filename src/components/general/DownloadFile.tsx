@@ -1,21 +1,21 @@
-"use client";
+'use client'
 
-import Button from "@/components/general/Button";
+import Button from '@/components/general/Button'
 
 const DownloadFile = () => {
 	return (
 		<Button
-			aria-label="Open new tab to show resume"
+			aria-label='Open new tab to show resume'
 			onClick={() =>
 				window?.open(
-					"/files/CV_Software_Engineer_TruongQuocKhanh.pdf",
-					"_blank"
+					'/files/CV-TruongQuocKhanh-Frontend_Engineer.pdf',
+					'_blank'
 				)
 			}
 		>
 			Download CV
 		</Button>
-	);
-};
+	)
+}
 
-export default DownloadFile;
+export default DownloadFile
